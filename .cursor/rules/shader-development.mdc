@@ -1,59 +1,66 @@
 ---
-description: 
+description:
 globs: *.glsl
 alwaysApply: false
 ---
-## Shader Development Guidelines
+# Shader 开发指南
 
-### Code Organization
-- Use clear naming conventions for uniforms and varyings
-- Organize shader code into logical sections (uniforms, varyings, functions, main)
-- Use includes for shared functionality
-- Document complex mathematical operations
-- Keep shader files focused and single-purpose
+## 代码组织
 
-### Performance Optimization
-- Minimize conditional statements in fragment shaders
-- Use built-in GLSL functions when available
-- Optimize vector operations
-- Minimize texture lookups
-- Use appropriate precision qualifiers
-- Avoid dynamic loops where possible
-- Cache repeated calculations
+- 为 uniform 和 varying 使用清晰的命名约定
+- 将 shader 代码组织成逻辑 sections（uniform、varying、functions、main）
+- 使用 includes 共享功能
+- 为复杂数学运算添加文档
+- 保持 shader 文件专注和单一职责
 
-### Best Practices
-- Initialize all variables
-- Use appropriate data types
-- Handle edge cases gracefully
-- Implement proper error handling
-- Use preprocessor directives effectively
-- Follow GLSL version compatibility guidelines
-- Document performance implications
+## 性能优化
 
-### Texture Management
-- Use appropriate texture formats
-- Implement proper texture coordinate handling
-- Use texture arrays when appropriate
-- Handle texture boundaries properly
-- Implement proper mipmap usage
+- 最小化 fragment shader 中的条件语句
+- 尽可能使用内置 GLSL 函数
+- 优化向量运算
+- 最小化纹理查找
+- 使用适当的精度修饰符
+- 尽可能避免动态循环
+- 缓存重复计算
 
-### Mathematics
-- Use efficient mathematical operations
-- Implement proper interpolation methods
-- Use appropriate coordinate spaces
-- Handle numerical precision issues
-- Document complex mathematical concepts
+## 最佳实践
 
-### Debugging
-- Use debug output uniforms
-- Implement visual debugging modes
-- Use appropriate error checking
-- Document known limitations
-- Implement fallbacks for unsupported features
+- 初始化所有变量
+- 使用适当的数据类型
+- 优雅处理边界情况
+- 实现适当的错误处理
+- 有效使用预处理器指令
+- 遵循 GLSL 版本兼容性指南
+- 记录性能影响
 
-### Cross-Platform Compatibility
-- Test on multiple GPU vendors
-- Handle precision differences
-- Use appropriate extensions
-- Document platform-specific issues
-- Implement fallbacks for unsupported features
+## 纹理管理
+
+- 使用适当的纹理格式
+- 实现适当的纹理坐标处理
+- 适当时候使用纹理数组
+- 正确处理纹理边界
+- 实现适当的 mipmap 使用
+
+## 数学
+
+- 使用高效的数学运算
+- 实现适当的插值方法
+- 使用适当的坐标空间
+- 处理数值精度问题
+- 为复杂数学概念添加文档
+
+## 调试
+
+- 使用调试输出 uniform
+- 实现可视化调试模式
+- 使用适当的错误检查
+- 记录已知限制
+- 为不支持的功能实现回退
+
+## 跨平台兼容性
+
+- 在多个 GPU 厂商上测试
+- 处理精度差异
+- 使用适当的扩展
+- 记录平台特定问题
+- 为不支持的功能实现回退

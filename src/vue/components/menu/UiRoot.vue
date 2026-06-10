@@ -9,6 +9,47 @@ import { onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import HowToPlay from './HowToPlay.vue'
 import LoadingScreen from './LoadingScreen.vue'
+import MainMenu from './MainMenu.vue'
+import PauseMenu from './PauseMenu.vue'
+import SettingsMenu from './SettingsMenu.vue'
+import SkinSelector from './SkinSelector.vue'
+
+const ui = useUiStore()
+const { locale } = useI18n()
+
+// Listen for core:ready to transition from loading to mainMenu
+onMounted(() => {
+  emitter.on('core:ready', handleCoreReady)
+  emitter.on('ui:escape', handleEscape)
+  window.addEventListener('blur', handleWindowBlur)
+})
+
+onUnmounted(() => {
+  emitter.off('core:ready', handleCoreReady)
+  emitter.off('ui:escape', handleEscape)
+  window.removeEventListener('blur', handleWindowBlur)
+})
+
+function handleCoreReady() {
+  ui.screen = 'mainMenu'
+  ui.mainMenuView = 'root'
+}
+
+function handleEscape() {
+  ui.handleEscape()
+}
+
+function handleWindowBlur() {
+  // 在 debugMode 下禁用 blur 处理
+  const isDebugMode = window.location.hash === '#debug'
+  if (isDebugMode) {
+    return
+  }
+
+  if (ui.screen === 'playing') {
+    ui.toPauseMenu()
+  }
+}
 </script>
 
 <template></template>

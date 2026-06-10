@@ -1,10 +1,11 @@
 <script setup>
 import UiRoot from '@ui-components/menu/UiRoot.vue'
+import AchievementPopup from '@ui-components/ui/AchievementPopup.vue'
 </script>
 
 <template>
   <!-- 主容器：相对定位 -->
-  <div class="relative w-screen h-screen overflow-hidden">
+  <div class="relative h-screen w-screen overflow-hidden">
     <!-- Three.js Canvas -->
     <canvas ref="threeCanvas" class="three-canvas absolute inset-0 z-0" />
   </div>
