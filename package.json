@@ -6,10 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "mitt": "^3.0.1"
+    "preview": "vite preview"
   },
   "dependencies": {
+    "@tweakpane/plugin-essentials": "^0.2.1",
+    "@vitejs/plugin-legacy": "^5.4.1",
+    "gsap": "^3.12.5",
+    "mitt": "^3.0.1",
+    "postcss-import": "^16.1.0",
+    "three-custom-shader-material": "^6.4.0",
     "vue": "^3.5.32",
     "pinia": "^3.0.2",
     "three": "^0.183.2",
