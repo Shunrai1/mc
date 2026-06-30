@@ -2,6 +2,7 @@
 import Experience from '@three/experience.js'
 import Crosshair from '@ui-components/Crosshair.vue'
 import UiRoot from '@ui-components/menu/UiRoot.vue'
+import GameHud from '@ui-components/hud/GameHud.vue'
 import AchievementPopup from '@ui-components/ui/AchievementPopup.vue'
 </script>
 
