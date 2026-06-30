@@ -1,4 +1,6 @@
 <script setup>
+import Experience from '@three/experience.js'
+import Crosshair from '@ui-components/Crosshair.vue'
 import UiRoot from '@ui-components/menu/UiRoot.vue'
 import AchievementPopup from '@ui-components/ui/AchievementPopup.vue'
 </script>
